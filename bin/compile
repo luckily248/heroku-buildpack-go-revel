@@ -37,8 +37,10 @@ urlfor() {
 
 mkdir -p "$1" "$2"
 build=$(cd "$1/" && pwd)
+echo 'build='$build
 cache=$(cd "$2/" && pwd)
 buildpack=$(dirname $(dirname $0))
+echo 'buildpack='$buildpack
 arch=$(uname -m|tr A-Z a-z)
 if test $arch = x86_64
 then arch=amd64
@@ -172,6 +174,7 @@ fi
 
 mkdir -p $build/.profile.d
 echo 'PATH=$PATH:$HOME/bin' > $build/.profile.d/go.sh
-echo 'PATH='+$PATH
-echo 'GOPATH='+$GOPATH
+echo 'PATH='$PATH
+echo 'GOPATH='$GOPATH
+echo 'p='$p
 go get github.com/revel/cmd/revel
