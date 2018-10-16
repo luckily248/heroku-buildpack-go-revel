@@ -101,8 +101,7 @@ cp -R $cache/$ver/go $build/.goroot
 
 GOBIN=$build/bin export GOBIN
 GOROOT=$build/.goroot export GOROOT
-GOPATH=$build
-GOPATH=$build/.go:$GOPATH export GOPATH
+GOPATH=$build/.go export GOPATH
 PATH=$GOROOT/bin:$PATH
 
 
