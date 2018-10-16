@@ -178,3 +178,4 @@ echo 'PATH='$PATH
 echo 'GOPATH='$GOPATH
 echo 'p='$p
 go get github.com/revel/cmd/revel
+heroku config:set GOPATH=$GOPATH
