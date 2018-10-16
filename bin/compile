@@ -103,6 +103,8 @@ GOBIN=$build/bin export GOBIN
 GOROOT=$build/.goroot export GOROOT
 GOPATH=$build/.go export GOPATH
 PATH=$GOROOT/bin:$PATH
+PATH=$GOBIN:$PATH
+PATH=$GOPATH/bin:$PATH
 
 
 if ! (which hg >/dev/null && which bzr >/dev/null)
